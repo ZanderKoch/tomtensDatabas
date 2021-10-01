@@ -5,11 +5,26 @@
  */
 package nu.te4.tomtensdatabas.resources;
 
+import beans.BarnBean;
+import javax.ws.rs.POST;
+import javax.ws.rs.Path;
+import javax.ws.rs.core.Response;
+import entities.Child;
+import javax.ws.rs.Consumes;
+import javax.ws.rs.core.MediaType;
+
 /**
  *
  * @author Zanders Koch
  */
-@
-public class barnResource {
+@Path("barn")
+public class BarnResource {
+    @EJB
+    private BarnBean bean;
     
+    @POST
+    @Consumes(MediaType.APPLICATION_JSON)
+    private Response addChild(Child child){
+        
+    }
 }
